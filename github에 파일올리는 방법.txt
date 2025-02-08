@@ -1,0 +1,50 @@
+PS C:\react_exam1> git init
+Initialized empty Git repository in C:/react_exam1/.git/
+PS C:\react_exam1> git remote add origin https://github.com/sujeong-16/react_t.git
+PS C:\react_exam1> git status
+On branch master
+
+No commits yet
+
+Untracked files:
+        css/
+        img/
+        index.html
+        js/
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\react_exam1> git add .
+warning: in the working copy of 'js/babel.min.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'js/jquery-1.11.2.min.js', LF will be replaced by CRLF the next time Git touches it
+PS C:\react_exam1> git commit -m "test"
+[master (root-commit) 3deb531] test
+ 18 files changed, 390 insertions(+)
+ create mode 100644 css/reset.css
+ create mode 100644 css/v_full.css
+ create mode 100644 img/mpr1.png
+ create mode 100644 img/mpr2.png
+ create mode 100644 img/mpr3.png
+ create mode 100644 img/mpr4.png
+ create mode 100644 img/p_bn.png
+ create mode 100644 img/p_main1.jpg
+ create mode 100644 img/ppr1.png
+ create mode 100644 img/ppr2.png
+ create mode 100644 img/ppr3.png
+ create mode 100644 img/ppr4.png
+ create mode 100644 index.html
+ create mode 100644 js/babel.min.js
+ create mode 100644 js/jquery-1.11.2.min.js
+ create mode 100644 js/main.js
+ create mode 100644 js/main_react.js
+ create mode 100644 js/v_full.js
+PS C:\react_exam1> git push origin master
+Enumerating objects: 22, done.
+Counting objects: 100% (22/22), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (21/21), done.
+Writing objects: 100% (22/22), 2.51 MiB | 5.16 MiB/s, done.
+Total 22 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/sujeong-16/react_t.git
+ * [new branch]      master -> master
+PS C:\react_exam1> 
+github에 들어가 setting -> pages -> master or main => save (퍼블리싱)

@@ -1,0 +1,7 @@
+참고한 사이트 : https://redux-advanced.vlpt.us/3/01.html
+
+[ yarn 설치확인 ]
+yarn --version
+
+[ yarn 설치 ]
+npm install --global yarn

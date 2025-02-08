@@ -1,0 +1,266 @@
+< react 설치 >
+- 설치할 폴더에 들어가서 터미널에 작성하기
+
+PS C:\react_ex> npm install -g create-react-app
+설치 후에 npx 치기
+
+
+* npm이 이미 설치가 되어 있다면 바로 npx 설치해도 괜찮음
+PS C:\react_ex> npx create-react-app test
+
+Creating a new React app in C:\react_ex\test.
+
+Installing packages. This might take a couple of minutes.
+Installing react, react-dom, and react-scripts with cra-template...
+
+
+added 1462 packages in 3m
+
+242 packages are looking for funding
+  run `npm fund` for details        
+
+Initialized a git repository.
+
+Installing template dependencies using npm...
+
+added 69 packages, and changed 1 package in 9s
+
+246 packages are looking for funding
+  run `npm fund` for details
+Removing template package using npm...
+
+
+removed 1 package, and audited 1531 packages in 3s
+
+246 packages are looking for funding
+  run `npm fund` for details
+
+8 vulnerabilities (2 moderate, 6 high)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+Created git commit.
+
+Success! Created test at C:\react_ex\test
+Inside that directory, you can run several commands:
+
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd test
+  npm start
+
+Happy hacking!
+PS C:\react_ex> 
+PS C:\react_ex> cd test
+PS C:\react_ex\test> npm start
+PS C:\react_ex\test> cd ..
+PS C:\react_ex> 
+
+복습할 때 전부 복사하기엔 용량이 크니 public(img), src를 복사하면 됨
+
+
+
+
+* 내부 inline style로 지정할 땐 style={{스타일속성 : '값'}}
+예시)
+function TestBasic() {
+  return(
+    <>
+      <h1 style={{color : 'red', fontSide:'2rem', fontWeight:'bold',border:'2px solid gray',textAlign:'center'}}>title</h1>
+    </>
+  );
+}
+export default TestBasic;
+
+
+
+
+[ router 설치 ]
+C:\react_rt\project>npm install react-router-dom
+
+added 3 packages, and audited 1535 packages in 4s
+
+246 packages are looking for funding
+  run `npm fund` for details
+
+8 vulnerabilities (2 moderate, 6 high)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+
+[ jQuery 설치 ]
+C:\react_rt\project>npm i jquery --save
+
+added 1 package, and audited 1536 packages in 3s
+
+246 packages are looking for funding
+  run `npm fund` for details
+
+8 vulnerabilities (2 moderate, 6 high)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+C:\react_rt\project>
+
+
+
+[ 사이트에서 api를 가져올 때 설치해야할 거 ]
+npm install axios
+
+
+[ 퍼블리싱 ]
+package.json 파일에 
+  "homepage": "https://sujeong-16.github.io/fmvreact",
+  "scripts": {
+     ...
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+추가 후에
+
+터미널에 작성 ↓
+C:\myreactmv\rtmovie>npm install gh-pages
+
+added 13 packages, and audited 1549 packages in 3s      
+
+247 packages are looking for funding
+  run `npm fund` for details
+
+8 vulnerabilities (2 moderate, 6 high)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+C:\myreactmv\rtmovie>npm run deploy
+
+> rtmovie@0.1.0 predeploy
+> npm run build
+
+
+> rtmovie@0.1.0 build
+> react-scripts build
+
+Creating an optimized production build...
+One of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it may break at any time.
+
+babel-preset-react-app is part of the create-react-app project, which
+is not maintianed anymore. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.
+
+Compiled successfully.
+
+File sizes after gzip:
+
+  108.4 kB  build\static\js\main.2a0bdb6f.js
+  1.52 kB   build\static\css\main.32e61399.css
+
+The project was built assuming it is hosted at /fmvreact/.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
+
+> rtmovie@0.1.0 deploy
+> gh-pages -d build
+
+Error: Failed to get remote.origin.url (task must either be run in a git repository with a configured origin remote or must be configured with the "repo" option).
+    at C:\myreactmv\rtmovie\node_modules\gh-pages\lib\git.js:214:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+C:\myreactmv\rtmovie>cd build
+
+C:\myreactmv\rtmovie\build>git init
+Initialized empty Git repository in C:/myreactmv/rtmovie/build/.git/
+
+C:\myreactmv\rtmovie\build>git remote add origin https://github.com/sujeong-16/fmvreact.git
+
+C:\myreactmv\rtmovie\build>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        asset-manifest.json
+        favicon.ico
+        index.html
+        logo192.png
+        logo512.png
+        manifest.json
+        robots.txt
+        static/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\myreactmv\rtmovie\build>git add .
+warning: in the working copy of 'asset-manifest.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'manifest.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'robots.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'static/css/main.32e61399.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'static/js/main.2a0bdb6f.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'static/js/main.2a0bdb6f.js.LICENSE.txt', LF will be replaced by CRLF the next time Git touches it
+
+C:\myreactmv\rtmovie\build>git commit -m "moviefirst"
+[master (root-commit) 5bb12e1] moviefirst
+ 12 files changed, 132 insertions(+)
+ create mode 100644 asset-manifest.json
+ create mode 100644 favicon.ico
+ create mode 100644 index.html
+ create mode 100644 logo192.png
+ create mode 100644 logo512.png
+ create mode 100644 manifest.json
+ create mode 100644 robots.txt
+ create mode 100644 static/css/main.32e61399.css
+ create mode 100644 static/css/main.32e61399.css.map
+ create mode 100644 static/js/main.2a0bdb6f.js
+ create mode 100644 static/js/main.2a0bdb6f.js.LICENSE.txt
+ create mode 100644 static/js/main.2a0bdb6f.js.map
+
+C:\myreactmv\rtmovie\build>git push origin master
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (17/17), 500.68 KiB | 5.21 MiB/s, done.
+Total 17 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/sujeong-16/fmvreact.git
+ * [new branch]      master -> master
+
+C:\myreactmv\rtmovie\build>
+
+한 후에 github에 들어가서 해당 폴더에 들어간 후에 setting > Pages > Build and deployment 부분에 Branch에 있는 "none" → "master"로 변경 후 save 버튼 누르기.
+시간이 좀 지난 후에 "visit site" 생기는 지 확인          [끝]

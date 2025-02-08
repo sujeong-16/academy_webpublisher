@@ -1,0 +1,138 @@
+용량이 너무 커서 퍼블리싱으로 github에 올리는 방법
+github 주소 -> https://github.com/sujeong-16/calculater.git
+
+package.json 파일에 "name" 위인 제일 위에
+
+"homepage": "https://sujeong-16.github.io/calculater",
+
+작성하고, Debug "scripts": {
+		"eject" 밑에
+
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+
+작성하고 저장하기.
+그 다음 터미널로 다시 돌아와서
+
+PS C:\testcal\calcu> npm install gh-pages 
+
+added 13 packages, and audited 1545 packages in 4s
+
+247 packages are looking for funding
+
+8 vulnerabilities (2 moderate, 6 high)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+PS C:\testcal\calcu> npm run deploy
+
+> calcu@0.1.0 predeploy
+> npm run build
+
+
+> calcu@0.1.0 build
+> react-scripts build
+
+Creating an optimized production build...
+One of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your
+node_modules folder for unrelated reasons, but it may break at any time.
+
+babel-preset-react-app is part of the create-react-app project, which
+is not maintianed anymore. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
+your devDependencies to work around this error. This will make this message
+go away.
+
+Compiled with warnings.
+
+[eslint] 
+src\compotest\CalTest.js
+  Line 33:14:  eval can be harmful                  no-eval
+  Line 35:16:  eval can be harmful                  no-eval
+  Line 35:34:  Expected '===' and instead saw '=='  eqeqeq
+  Line 40:25:  eval can be harmful                  no-eval
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+File sizes after gzip:
+
+  47.22 kB  build\static\js\main.5eb81412.js
+  1.77 kB   build\static\js\787.ff14e5a9.chunk.js
+  761 B     build\static\css\main.3102142b.css
+
+The project was built assuming it is hosted at /calculater/.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
+
+> calcu@0.1.0 deploy
+> gh-pages -d build
+
+Error: Failed to get remote.origin.url (task must either be run in a git repository with a configured origin remote or must be configured with the "repo" option).
+    at C:\testcal\calcu\node_modules\gh-pages\lib\git.js:214:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+PS C:\testcal\calcu> cd build      
+PS C:\testcal\calcu\build> git init
+Initialized empty Git repository in C:/testcal/calcu/build/.git/
+PS C:\testcal\calcu\build> git remote add origin https://github.com/sujeong-16/calculater.git
+PS C:\testcal\calcu\build> git status
+On branch master
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        asset-manifest.json
+        favicon.ico
+        index.html
+        logo192.png
+        logo512.png
+        manifest.json
+        robots.txt
+        static/
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\testcal\calcu\build> git add .
+warning: in the working copy of 'asset-manifest.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'robots.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'static/css/main.3102142b.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'static/js/787.ff14e5a9.chunk.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'static/js/main.5eb81412.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'static/js/main.5eb81412.js.LICENSE.txt', LF will be replaced by CRLF the next time Git touches it   
+PS C:\testcal\calcu\build> git commit -m "message desu"
+[master (root-commit) 729bd4c] message desu
+ 14 files changed, 93 insertions(+)
+ create mode 100644 asset-manifest.json
+ create mode 100644 favicon.ico
+ create mode 100644 index.html
+ create mode 100644 logo192.png
+ create mode 100644 logo512.png
+ create mode 100644 manifest.json
+ create mode 100644 robots.txt
+ create mode 100644 static/css/main.3102142b.css
+ create mode 100644 static/css/main.3102142b.css.map
+ create mode 100644 static/js/787.ff14e5a9.chunk.js
+ create mode 100644 static/js/787.ff14e5a9.chunk.js.map
+ create mode 100644 static/js/main.5eb81412.js
+ create mode 100644 static/js/main.5eb81412.js.LICENSE.txt
+ create mode 100644 static/js/main.5eb81412.js.map
+PS C:\testcal\calcu\build> git push origin master
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (19/19), 183.33 KiB | 5.09 MiB/s, done.
+Total 19 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/sujeong-16/calculater.git
+ * [new branch]      master -> master
+PS C:\testcal\calcu\build> 
