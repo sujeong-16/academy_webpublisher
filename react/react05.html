@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>클릭 이벤트</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script> 
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script> 
+  <script src="./js/babel.min.js"></script>   <!--jsx(react) 해석해주는 프로그램-->
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- === ⇢ 값과 타입이 모두 같을 때 -->
+  <script type="text/babel">
+    class Button extends React.Component {
+      constructor(props){   //React에서 Component를 생설할 때, state 값을 초기화하거나 메서드를 바인딩할 때 constructor()를 사용.
+        super(props);   //상속한 컴포넌트의 생성자를 구현할 때는 super(props)를 권고함.
+        this.state = {
+          st: false,
+        };
+      }
+      render() {
+        // 버튼을 클릭하면 st의 값을 true로 변경하라.
+        return (
+          <button onClick={() => this.setState({ st: true })}>
+            {this.state.st === true ? "참" : "거짓"}  
+          </button>
+        );
+      }
+    }
+
+    // 출력하기
+    ReactDOM.render(<Button />, document.querySelector("#root"));
+  </script>
+</body>
+</html>

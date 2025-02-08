@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>리엑트 01</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script> 
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script> 
+  <script src="./js/babel.min.js"></script>   <!--jsx(react) 해석해주는 프로그램-->
+  <style>
+    a {
+      text-decoration: none;
+      color: #111;
+    }
+    a:hover {color: lightcoral;}
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- script type="text/babel" => 이걸 써줘야 babel이 html에 연결할 수 있음 -->
+  <script type="text/babel">
+    const root = document.querySelector("#root");
+    const msg = testEx();
+    ReactDOM.render(msg, root)  //얘를 꼭 써줘야 함
+
+    function testEx(){
+      /* <>나 <div>나 꼭 무언가를 감싸는 형태로 있어야함. <>처럼 비어있어도 가능함. */
+      return (
+        <>
+        <h1><a href="#">TEST</a></h1>
+        </>
+      );
+    }
+  </script>
+</body>
+</html>

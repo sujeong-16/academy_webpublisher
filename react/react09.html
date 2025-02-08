@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자식 컴포넌트에게 값보내기</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script> 
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script> 
+  <script src="./js/babel.min.js"></script>   <!--jsx(react) 해석해주는 프로그램-->
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    class App extends React.Component {
+      render() {
+        return <ul>
+            <Item value="Item 컴포넌트 1번" />
+            <Item value="Item 컴포넌트 2번" />
+            <Item value="Item 컴포넌트 3번" />
+          </ul>
+      }
+    }
+    class Item extends React.Component {
+      constructor (props) {
+        super(props)
+      }
+      render() {
+        return <li>{this.props.value}</li>
+      }
+    }
+
+    // 출력하기
+    ReactDOM.render(<App />, document.querySelector("#root"));
+  </script>
+</body>
+</html>

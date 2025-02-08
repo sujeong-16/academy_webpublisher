@@ -1,0 +1,116 @@
+body {
+  font-family: "PretendardR";
+  font-size: 14px;
+  width: 100%;
+  height: 2000px;
+  background-color: #eee;
+}
+
+#header {
+  display: inline-block;
+}
+
+#quickMenu {
+  position: fixed;
+  top: 75%;
+  right: 3%;
+  width: 50px;
+  height: 100px;
+  border: 1px solid #111;
+  text-align: center;
+  padding: 5px;
+}
+#quickMenu p {
+  cursor: pointer;
+}
+
+#container {
+  padding: 0 80px;
+}
+#container h1 {
+  margin: 300px 0;
+  width: 100%;
+  font-size: 40px;
+  text-align: center;
+  font-family: "PretendardB";
+  letter-spacing: -0.15rem;
+}
+#container #webDesign {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-bottom: 100px;
+}
+#container #webDesign h3 {
+  font-family: "PretendardM";
+  font-size: 30px;
+  padding-bottom: 30px;
+}
+#container #webDesign ul {
+  display: flex;
+}
+#container #webDesign ul li {
+  width: 350px;
+  height: 380px;
+  border: 1px solid rgba(17, 17, 17, 0.3);
+  border-radius: 3px;
+  background-color: #111;
+  color: #fff;
+  margin-right: 30px;
+}
+#container #webDesign ul li .web_img {
+  display: inline-block;
+  width: 300px;
+  height: 250px;
+  margin: 20px;
+}
+#container #webDesign ul li .web_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+}
+#container #webDesign ul li .text {
+  margin: 10px 20px;
+  margin-top: 0;
+  position: relative;
+  top: -35px;
+  left: 5px;
+}
+#container #webDesign ul li .text > p {
+  margin-bottom: 6px;
+}
+#container #webDesign ul li .text > span {
+  font-family: "PretendardM";
+  font-size: 20px;
+}
+#container #webDesign ul li > p {
+  position: relative;
+  top: -35px;
+  left: 240px;
+  display: inline-block;
+}
+#container #webDesign ul li .redesign_btn {
+  z-index: 2;
+  position: relative;
+  top: -50px;
+  left: 19px;
+  display: flex;
+}
+#container #webDesign ul li .redesign_btn .btn_box {
+  height: 30px;
+  padding: 5px;
+  border: 1px solid rgba(17, 17, 17, 0.8);
+  margin: 0 1px;
+  cursor: pointer;
+  color: #000;
+}
+#container #webDesign ul li .redesign_btn .btn_box:hover {
+  background-color: #a7aa66;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+}
+#container #webDesign ul li .redesign_btn .btn_box:hover a {
+  color: #fff;
+}
+#container #webDesign ul li .redesign_btn .btn_box a {
+  color: #000;
+}/*# sourceMappingURL=index.css.map */

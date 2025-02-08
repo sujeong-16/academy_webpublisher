@@ -1,0 +1,135 @@
+body {
+  font-family: "PretendardR";
+  font-size: 14px;
+  width: 100%;
+  height: 2000px;
+  background-color: #eee;
+}
+
+
+#header {
+  display: inline-block;
+}
+
+#quickMenu {
+  position: fixed;
+  top: 75%;
+  right: 3%;
+
+  width: 50px;
+  height: 100px;
+  border: 1px solid #111;
+  text-align: center;
+  padding: 5px;
+
+  p {
+    cursor: pointer;
+  }
+}
+
+#container {
+  padding: 0 80px;
+
+  h1 {
+    margin: 300px 0;
+    width: 100%;
+    font-size: 40px;
+    
+    text-align: center;
+    font-family: "PretendardB";
+    letter-spacing: -0.15rem;   //자간 조절
+  }
+
+  #webDesign {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 100px;
+
+    h3 {
+      font-family: "PretendardM";
+      font-size: 30px;
+      padding-bottom: 30px;
+    }
+    ul {
+      display: flex;
+
+      li {
+        width: 350px;
+        height: 380px;
+        border: 1px solid rgba($color: #111, $alpha: 0.3);
+        border-radius: 3px;
+
+        background-color: #111;
+        color: #fff;
+        margin-right: 30px;
+        
+        .web_img {
+          display: inline-block;
+          width: 300px;
+          height: 250px;
+          margin: 20px;
+          
+          img {
+            width: 100%;
+            height: 100%;          
+            border-radius: 3px;
+          }
+        }
+        .text {
+          margin: 10px 20px;
+          margin-top: 0;
+          position: relative;
+          top: -35px;
+          left: 5px;
+
+          & > p {
+            margin-bottom: 6px;
+          }
+          & > span {
+            font-family: "PretendardM";
+            font-size: 20px;
+          }
+        }
+        & > p {
+          position: relative;
+          top: -35px;
+          left: 240px;
+          display: inline-block;
+        }
+        .redesign_btn {
+          z-index: 2;
+          position: relative;
+          top: -50px;
+          left: 19px;
+
+          display: flex;
+
+          // border: 1px solid rgba($color: #a7aa66, $alpha: 0.8);
+
+          .btn_box {
+            height: 30px;
+            padding: 5px;
+            border: 1px solid rgba($color: #111, $alpha: 0.8);
+            
+            margin: 0 1px;
+            cursor: pointer;
+            color: #000;
+
+            &:hover {
+              background-color: #a7aa66;
+              border: 1px solid rgba($color: #111, $alpha: 0.1);
+              a {
+                color: #fff;
+              }
+            }
+            a {
+              // font-size: 18px;
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}

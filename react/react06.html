@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>if문</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script> 
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script> 
+  <script src="./js/babel.min.js"></script>   <!--jsx(react) 해석해주는 프로그램-->
+</head>
+<body>
+  <div id="main2"></div>
+
+  <script type="text/babel">
+    const root = document.querySelector("#main2");
+    const mm = getGreeing();
+
+    ReactDOM.render(mm, root);
+
+    function getGreeing(){
+      const roll = Math.floor(Math.random()*5)
+      if(roll == 0) return <h1>react1</h1>
+      if(roll == 1) return <h1>react2</h1>
+      if(roll == 2) return <h1>react3</h1>
+      if(roll == 3) return <h1>react4</h1>
+      if(roll == 4) return <h1>react5</h1>
+    } //새로고침 누를 때마다 랜덤하게 출력됨.
+  </script>
+</body>
+</html>

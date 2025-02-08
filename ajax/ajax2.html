@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>php 연결</title>
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script>
+    $(function(){
+      $("#member").on("submit", function(){
+        const d = $(this).serialize();  // 폼 요소에 전송할 데이터를 재가공
+        $.ajax({
+          url: "member.php",
+          type: "post",
+          data: d,  //전송할 데이터
+          success: function(result){  // 전송 및 요청이 정상적으로 되었을 때
+            $("#txt1").text(result);
+          }
+        });
+        return false;  //action 페이지로 전환되는 것을 차단함
+      });
+    });
+  </script>
+</head>
+<body>
+  <form action="member.php" method="post" name="member" id="member">
+    <fieldset>
+      <legend>회원가입</legend>
+      <p>
+        <label for="user_name">이름</label>
+        <input type="text" name="user_name" id="user_name">
+      </p>
+      <p><input type="submit" value="확인"></p>
+    </fieldset>
+  </form>
+  <h1 id="txt1"></h1>
+</body>
+</html>

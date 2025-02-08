@@ -1,0 +1,19 @@
+[
+  {
+    "myname": "가",
+    "users": [
+      {
+        "id": "abc0001",
+        "nickname": "가나다"
+      },
+      {
+        "id": "abc0002",
+        "nickname": "나다"
+      },
+      {
+        "id": "abc0003",
+        "nickname": "다라마"
+      }
+    ]
+  }
+]
